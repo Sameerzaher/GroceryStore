@@ -47,32 +47,34 @@ export class API extends React.Component{
                     }
                 })
             }
-            static createUserProfile(username, firstName, lastName, email, userType, token) {
-                console.log(username, firstName, lastName, email, userType);
-                console.log("inside createUserProfile function");
-                
-                const url = "http://127.0.0.1:8000/mainApp/userProfile/";
-                const data = {
-                    username: username,
-                    firstName: firstName,
-                    lastName: lastName,
-                    email: email,
-                    userType: userType
-                };
-                const options = {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Token ${token}`
-                    },
-                    body: JSON.stringify(data)
-                };
-                
-                return fetch(url, options)
-                    .then(response => response.json())
-                    .catch(error => console.error(error));
-            }
-            
+    static async createUserProfile(username, firstName, lastName,email,userType){
+        return fetch(`http://127.0.0.1:8000/mainApp/userProfile/`, {
+            method: 'POST',
+            headers: {
+
+                'Content-Type': 'application/json',
+                //'Authorization': `Token ${token}`
+            },
+            body: JSON.stringify({'username' : username, 'firstName' : firstName,'lastName' : lastName, 'email' : email, 'userType' :userType} )
+
+        })
+            .then(resp => {
+                if(resp.status === 201){
+                    // Product added successfully
+                    console.log("New User Added")
+                }else{
+                    // console.log(resp)
+                }
+            })
+            .catch(error => {
+                // handle error
+            });
+
+    }
+
+
+
+
     static getAllProducts(){
         console.log("inside getAllProducts fun")
         return fetch(`http://127.0.0.1:8000/mainApp/Products/`, {
@@ -181,8 +183,8 @@ export class API extends React.Component{
                         // handle error
                     });
         } 
-        static AddNewOrder(DeliveryName,Prods,TotalPrice,OrderDate,Delivery_Date,Address,Amount,Status){
-            console.log("sameer",DeliveryName,Prods,TotalPrice,OrderDate,Delivery_Date,Address,Amount,Status)
+        static AddNewOrder(DeliveryName,Prods,TotalPrice,OrderDate,Delivery_Date,Address,Amo,Stat){
+            console.log("sameer",DeliveryName,Prods,TotalPrice,OrderDate,Delivery_Date,Address,Amo,Stat)
             console.log("inside AddNewOrder fun")
             return fetch(`http://127.0.0.1:8000/mainApp/Orders/`, {
                     method: 'POST',
@@ -192,7 +194,7 @@ export class API extends React.Component{
                       //'Authorization': `Token ${token}` 
                          },
                          body: JSON.stringify({'delivery_name': DeliveryName, 'products' : Prods, 'total_price' : TotalPrice,
-                         'order_date' : OrderDate, 'delivery_date' : Delivery_Date, 'address' : Address, 'amount' : Amount, 'status' : Status} )  
+                         'order_date' : OrderDate, 'delivery_date' : Delivery_Date, 'address' : Address, 'amount' : Amo, 'status' : Stat} )
                             
                     })
                     .then(resp => {

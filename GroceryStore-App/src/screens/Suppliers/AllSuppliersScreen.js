@@ -24,7 +24,7 @@ const renderSupplier = ({item}) => {
       Supplier {item.id}
     </Text>
     <Text style={{color:"black", fontSize:20}}>name : {item.name}</Text>
-    <Text style={{color:"black", fontSize:20}}>Supplier_email : {item.Supplier_email}</Text>
+    <Text style={{color:"black", fontSize:20}}>Supplier_email : {item.SupplierEmail}</Text>
     <Text style={{color:"black", fontSize:20}}>Products : {item.Products}</Text>
     <Text style={{color:"black", fontSize:20}}>address : {item.address}</Text>
   </View>

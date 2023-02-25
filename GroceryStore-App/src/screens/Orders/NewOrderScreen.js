@@ -27,7 +27,7 @@ export default function NewOrderScreen({ navigation, route }) {
   const [address, setAddress] = useState('');
   const [amount , setAmount] = useState('');
   const [status , setStatus] = useState('');
-
+  const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     fetch('http://127.0.0.1:8000/mainApp/Products/')
@@ -44,7 +44,7 @@ export default function NewOrderScreen({ navigation, route }) {
       Alert.alert('One of the fields is empty');
       return;
     }
-    API.AddNewOrder(deliveryname, totalprice, selectedProductItems, address, orderdate, deliverydate, amount, status)
+    API.AddNewOrder(deliveryname, selectedProductItems,totalprice ,orderdate, deliverydate, address, amount, status)
       .then(() => {
         Alert.alert('New Order added successfully');
       })
@@ -90,14 +90,16 @@ export default function NewOrderScreen({ navigation, route }) {
         autoCapitalize="none"
       />
       <TextInput
-        label="Order Date"
+        label="Order Date (YYYY - MM - DD)"
         returnKeyType="next"
         value={orderdate}
         onChangeText={(value) => setOrderDate(value)}
         autoCapitalize="none"
+        Pl
+
       />
       <TextInput
-        label="Delivery Date"
+        label="Delivery Date (YYYY - MM - DD) "
         returnKeyType="next"
         value={deliverydate}
         onChangeText={(value) => setDeliveryDate(value)}
@@ -117,13 +119,14 @@ export default function NewOrderScreen({ navigation, route }) {
         onChangeText={(value) => setAmount(value)}
         autoCapitalize="none"
       />
-      <TextInput
-        label="Status"
-        returnKeyType="next"
-        value={status}
-        onChangeText={(value) => setStatus(value)}
-        autoCapitalize="none"
-      />
+          <TextInput
+              label="Status"
+              returnKeyType="next"
+              value={status}
+              onChangeText={(value) => setStatus(value)}
+              autoCapitalize="none"
+              keyboardType="numeric"
+          />
       </ScrollView>
     
       <Button mode="outlined" onPress={onSubmit}>
