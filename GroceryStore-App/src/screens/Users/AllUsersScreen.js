@@ -22,10 +22,11 @@ const renderUserProfile = ({item}) => {
     <Text style={{color:"black",fontSize:30,fontWeight:"bold"}}>
       UserProfile {item.id}
     </Text>
-    <Text style={{color:"black", fontSize:20}}>name : {item.username}</Text>
+    <Text style={{color:"black", fontSize:20}}>username : {item.username}</Text>
     <Text style={{color:"black", fontSize:20}}>email : {item.email}</Text>
     <Text style={{color:"black", fontSize:20}}>firstName : {item.firstName}</Text>
     <Text style={{color:"black", fontSize:20}}>lastName : {item.lastName}</Text>
+        <Text style={{color:"black", fontSize:20}}>Type : {item.userType}</Text>
 
   </View>
 

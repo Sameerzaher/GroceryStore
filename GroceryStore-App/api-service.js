@@ -47,7 +47,7 @@ export class API extends React.Component{
                     }
                 })
             }
-    static async createUserProfile(username, firstName, lastName,email,userType){
+    static async createUserProfile(username1 ,username, firstName, lastName,email,userType){
         return fetch(`http://127.0.0.1:8000/mainApp/userProfile/`, {
             method: 'POST',
             headers: {
@@ -55,7 +55,7 @@ export class API extends React.Component{
                 'Content-Type': 'application/json',
                 //'Authorization': `Token ${token}`
             },
-            body: JSON.stringify({'username' : username, 'firstName' : firstName,'lastName' : lastName, 'email' : email, 'userType' :userType} )
+            body: JSON.stringify({'user': username1 ,'username' : username, 'firstName' : firstName,'lastName' : lastName, 'email' : email, 'userType' :userType} )
 
         })
             .then(resp => {

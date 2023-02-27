@@ -41,6 +41,12 @@ class UserViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['POST'])
     def getuser(self, request, pk=None):
         user = User.object.get(id=pk)
+    @action (detail=True ,methods = ['GET'])
+    def getUserID(self, request , pk =None):
+        print("im here inside getUserID")
+        user =request.user
+
+        u = User.objects.fillter()
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
@@ -56,13 +62,8 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     def createUserProfile(self, request, pk=None):
         print("inside create user profile")
         # get the given username
-        username = request.data.get('username')
-        
-        # get the user from DB by the given username
-        getUser = User.objects.filter(username=username)
-        if not getUser.exists():
-            return Response({'message': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
-            
+        username1 = request.data.get('user')
+        givenUsername1 = request.data.get('username','')
         # get the values of first name, last name, email and user type
         givenFirstName = request.data.get('firstName', '')
         givenLastName = request.data.get('lastName', '')
@@ -71,13 +72,24 @@ class UserProfileViewSet(viewsets.ModelViewSet):
         
         # create the new user profile
         newUser = UserProfile.objects.create(
-            user=getUser[0], username=username, firstName=givenFirstName, 
+            user=username1, username=givenUsername1, firstName=givenFirstName,
             lastName=givenLastName, email=givenUserEmail, userType=givenUserType)
         print("user is: ", newUser)
         
         response = {'message': 'created', 'results': {'id': newUser.id}}
         return Response(response, status=status.HTTP_200_OK)
 
+    # @action(detail = True, methods=['POST'])
+    # def getUserTypeByUserID(self ,request,pk=None):
+    #     userID = request.data['userID']
+    #     username =request.data['username']
+    #     arr = [userID,username]
+    #     u = UserProfile.objects.get(username = arr[2])
+    #     serializers = UserProfileSerializer(u, many=False)
+    #     response = {'message': 'Get', 'results': serializers.data}
+    #     print("response:", response)
+    #     return Response(response, status=status.HTTP_200_OK)
+    #
 
     @action(detail=True, methods=['POST'])
     def getUserByUsername(self, request, pk=None):

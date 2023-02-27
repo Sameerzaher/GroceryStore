@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5d1e8440-cc87-4acf-874a-3f1037dbc488" name="Default Changelist" comment="Grocery Store Expo _ V3">
+      <change afterPath="$PROJECT_DIR$/.idea/GroceryStore.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/api-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/api-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/NewOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/NewOrderScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/RegisterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/RegisterScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AddSupplierScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AddSupplierScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AddUserScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AddUserScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beerstore-server/beerstore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/beerstore/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beerstore-server/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" afterDir="false" />
+    </list>
+    <list id="1c99e9e2-1fd6-446f-b9d5-60866f69d6b3" name="Changes by waleed" comment="">
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/StartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/StartScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,25 +46,45 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js">
+      <ranges>
+        <range start1="9" end1="9" start2="9" end2="10" changelist="1c99e9e2-1fd6-446f-b9d5-60866f69d6b3" />
+        <range start1="13" end1="13" start2="14" end2="15" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="24" end1="25" start2="26" end2="27" changelist="1c99e9e2-1fd6-446f-b9d5-60866f69d6b3" />
+        <range start1="28" end1="29" start2="30" end2="30" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="35" end1="39" start2="36" end2="36" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="45" end1="49" start2="42" end2="42" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="54" end1="58" start2="47" end2="47" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="63" end1="67" start2="52" end2="52" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="71" end1="72" start2="56" end2="57" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+      </ranges>
+    </file>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2MCvfT5J8Z3MvUfCGxoWxOd1RMW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
@@ -61,6 +107,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677284481758</updated>
       <workItem from="1677284482988" duration="13141000" />
+      <workItem from="1677326200842" duration="16107000" />
+      <workItem from="1677440628688" duration="18684000" />
     </task>
     <task id="LOCAL-00001" summary="Grocery Store Expo _ V2">
       <created>1677288075761</created>
@@ -76,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677296880976</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Grocery Store Expo _ V3">
+      <created>1677326218528</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677326218529</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

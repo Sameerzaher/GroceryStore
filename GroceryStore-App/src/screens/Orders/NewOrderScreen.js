@@ -39,7 +39,7 @@ export default function NewOrderScreen({ navigation, route }) {
   const onSelectedItemsChange = (selectedItems) => setSelectedProductItems(selectedItems);
 
   const onSubmit = () => {
-    if (deliveryname === '' || totalprice === '' || selectedProductItems.length === 0 || address === '' 
+    if (deliveryname === '' || totalprice === '' || selectedProductItems.length === 0 || address === ''
     || orderdate === '' || deliverydate === '' || amount === '' || status === '') {
       Alert.alert('One of the fields is empty');
       return;
@@ -74,7 +74,7 @@ export default function NewOrderScreen({ navigation, route }) {
     selectedItems={selectedProductItems}
     styleDropdownMenu={{ marginTop: 5 }}
     styleDropdownMenuSubsection={{ backgroundColor: 'white' }}
-    styleTextDropdown={{ paddingHorizontal: 5, fontFamily: 'sans-serif' }}
+    styleTextDropdown={{ paddingHorizontal: 5}}
     styleListContainer={{ backgroundColor: 'white' }}
     styleItemContainer={{ paddingVertical: 5 }}
     iconSearch={<MaterialCommunityIcons name="magnify" size={10} color="#999" />}

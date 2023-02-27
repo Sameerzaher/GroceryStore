@@ -52,14 +52,11 @@ export default function RegisterScreen({ navigation }) {
 
                registerUser();
                if (username == "" || password == "" || firstName =="" || lastName =="") {
-                alert("one or more of the fileds is empty");
+                alert("one or more of the fields is empty");
                 return;
-              } 
-    
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Dashboard' }],
-    })
+              }
+
+      navigation.navigate('Dashboard', {username: username});
   }
 
   return (

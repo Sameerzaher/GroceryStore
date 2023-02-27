@@ -11,12 +11,16 @@ import axios from 'axios';
 import { API } from '../../../api-service';
 
 export default function AddUserScreen({ navigation, route }) {
+    const {username} = route.params;
     const [users, setUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [userType, setUserType] = useState('');
+    const [usernameInput, setUsernameInput] = useState('');
+    const [selectedUserNameSelectList, setSelectedUserNameSelectList] = useState('');
+
     const userTypes = [
         { key: '1', value: 'Store Manager' },
         { key: '2', value: 'Store Employee' },
@@ -26,7 +30,8 @@ export default function AddUserScreen({ navigation, route }) {
         const fetchUsers = async () => {
             try {
                 const response = await axios.get(`http://127.0.0.1:8000/mainApp/users/`);
-                const users = response.data.map((user) => ({ key: user.username, value: user.username }));
+                const users = response.data.map((user) => ({ key: user.id, value: user.username, username: user.username }));
+
                 setUsers(users);
             } catch (error) {
                 console.log(error);
@@ -37,28 +42,40 @@ export default function AddUserScreen({ navigation, route }) {
     }, []);
 
     const handleSelectUser = (selected) => {
+        const selectedUser = users.find(user => user.id === selected.key);
+        if (!selectedUser) {
+            console.log(`User with id ${selected.key} not found in users array`);
+            return;
+        }
         setSelectedUser(selected);
+        console.log(selected);
+        setSelectedUserNameSelectList(selectedUser.username);
+        console.log(selectedUser.value);
+        // const x = selectedUser.value;
+        // return x;
     };
 
     const handleSubmit = async () => {
-        console.log(selectedUser, firstName, lastName, email, userType);
         if (!selectedUser || !firstName || !lastName || !email || !userType) {
-            console.log(selectedUser, firstName, lastName, email, userType);
             Alert.alert('Please fill in all fields');
             return;
         }
-
+        // try {
+        //     const username = users.find(users => users.id === selectedUser).username;
+        //     await API.createUserProfile(selectedUser, username, firstName, lastName, email, userType);
+        //     Alert.alert('User created successfully');
+        // }
         try {
-            //const token = await getToken();
-            await API.createUserProfile( selectedUser, firstName, lastName, email,userType);
-
+            //const username11 = users.find(users => users.id === selectedUser).username;
+            console.log(selectedUser, usernameInput, firstName, lastName, email, userType);
+            await API.createUserProfile(selectedUser, usernameInput, firstName, lastName, email, userType);
             Alert.alert('User created successfully');
-        } catch (error) {
+        }
+        catch (error) {
             console.log(error);
             Alert.alert('Error creating user');
         }
     };
-
     return (
         <Background>
             <BackButton goBack={navigation.goBack} />
@@ -70,7 +87,14 @@ export default function AddUserScreen({ navigation, route }) {
                 data={users}
                 label="Select a User"
             />
+            <TextInput
+                label = "User Name"
+                retunKeyType="next"
+                value={usernameInput}
+                onChangeText = {setUsernameInput}
+                autoCapitalize="none"
 
+                />
             <TextInput
                 label="First Name"
                 returnKeyType="next"

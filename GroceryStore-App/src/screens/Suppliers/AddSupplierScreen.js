@@ -64,23 +64,21 @@ export default function AddSupplierScreen({ navigation, route }) {
       />
       <View style={{ flex: 1 }}>
       <MultiSelect
-  items={productItems}
-  searchInputPlaceholderText="Search Items..."
-  uniqueKey="id"
-  displayKey="name"
-  onSelectedItemsChange={onSelectedItemsChange}
-  selectedItems={selectedProductItems}
-  styleDropdownMenu={{ marginTop: 20 }}
-  styleDropdownMenuSubsection={{ backgroundColor: 'white' }}
-  styleTextDropdown={{ paddingHorizontal: 20, fontFamily: 'sans-serif' }}
-  styleListContainer={{ backgroundColor: 'white' }}
-  styleItemContainer={{ paddingVertical: 20 }}
-  iconSearch={<MaterialCommunityIcons name="magnify" size={10} color="#999" />}
-  iconCancel={<MaterialCommunityIcons name="close" size={10} color="#999" />}
-/>
-
-
-</View>
+          items={productItems}
+          searchInputPlaceholderText="Search Items..."
+          uniqueKey="id"
+          displayKey="name"
+          onSelectedItemsChange={onSelectedItemsChange}
+          selectedItems={selectedProductItems}
+          styleDropdownMenu={{ marginTop: 50 }}
+          styleDropdownMenuSubsection={{ backgroundColor: 'white' }}
+          styleTextDropdown={{ paddingHorizontal: 50}}
+          styleListContainer={{ backgroundColor: 'white' }}
+          styleItemContainer={{ paddingVertical: 50 }}
+          iconSearch={<MaterialCommunityIcons name="magnify" size={10} color="#999" />}
+          iconCancel={<MaterialCommunityIcons name="close" size={10} color="#999" />}
+        />
+        </View>
       <Paragraph>Selected Products: {selectedProductItems.join(', ')}</Paragraph>
       <TextInput
         label="Address"
