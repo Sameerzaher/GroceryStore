@@ -10,7 +10,9 @@ export default function StartScreen({ navigation }) {
     <Background>
       <Logo />
       <Header>Grocery Store</Header>
+
       <Button
+          style={{  width: '100%', justifyContent: 'center'}}
         mode="contained"
         onPress={() => navigation.navigate('LoginScreen')}
       >

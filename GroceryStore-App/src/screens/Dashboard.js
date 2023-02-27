@@ -7,6 +7,7 @@ import Button from '../components/Button'
 import { Text } from 'react-native-paper'
 import API from '../../api-service'
 import { useCookies } from 'react-cookie'
+
 export default function Dashboard({ navigation, route}) {
   const [token, deleteToken] = useCookies(['mr-token']);
   const {username} = route.params;
@@ -23,7 +24,7 @@ export default function Dashboard({ navigation, route}) {
         index: 0,
         routes: [{ name: 'StartScreen' }],
       })
-}
+};
   return (
     <Background>
       <Logo />
