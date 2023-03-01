@@ -136,43 +136,43 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     #         response = {'message': 'Get', 'results': serializers.data}
     #         return Response (response, status=status.HTTP_200_OK)
 
-# update the user's profile details
-    @action(detail=True, methods=['POST'])
-    def UpdateUserDetails(self, request, pk=None):
-
-        # get the user by the authentication
-        user = request.user
-        # if getUserProfile get a value (len(getUserProfile) > 0) it means that
-        # this object exist in DB and the user is trying to update that object.
-        getUserProfile = UserProfile.objects.filter(user=user.id)
-        try:
-            # success if need to update
-
-            profile = UserProfile.objects.get(id=getUserProfile[0].id)
-            print("aaabbb ", getUserProfile[0].id)
-            profile.user = user
-            # get the new details
-            firstName = request.data['firstName']
-            lastName = request.data['lastName']
-            aboutMe = request.data['aboutMe']
-            hobbies = request.data['hobbies']
-            myGoal = request.data['myGoal']
-            # insert the new details in the new object
-            profile.firstName = firstName
-            profile.lastName = lastName
-            profile.aboutMe = aboutMe
-            profile.hobbies = hobbies
-            profile.myGoal = myGoal
-
-            profile.save()
-            print("new profile is: ", profile)
-            serializers = UserProfileSerializer(profile, many=False)
-            response = {'message': 'Updated', 'results': serializers.data}
-            return Response(response, status=status.HTTP_200_OK)
-        except:
-            # requested profile not found in DB
-            response = {'message': 'error'}
-            return Response(response, status=status.HTTP_200_OK)
+# # update the user's profile details
+#     @action(detail=True, methods=['POST'])
+#     def UpdateUserDetails(self, request, pk=None):
+#
+#         # get the user by the authentication
+#         user = request.user
+#         # if getUserProfile get a value (len(getUserProfile) > 0) it means that
+#         # this object exist in DB and the user is trying to update that object.
+#         getUserProfile = UserProfile.objects.filter(user=user.id)
+#         try:
+#             # success if need to update
+#
+#             profile = UserProfile.objects.get(id=getUserProfile[0].id)
+#             print("aaabbb ", getUserProfile[0].id)
+#             profile.user = user
+#             # get the new details
+#             firstName = request.data['firstName']
+#             lastName = request.data['lastName']
+#             aboutMe = request.data['aboutMe']
+#             hobbies = request.data['hobbies']
+#             myGoal = request.data['myGoal']
+#             # insert the new details in the new object
+#             profile.firstName = firstName
+#             profile.lastName = lastName
+#             profile.aboutMe = aboutMe
+#             profile.hobbies = hobbies
+#             profile.myGoal = myGoal
+#
+#             profile.save()
+#             print("new profile is: ", profile)
+#             serializers = UserProfileSerializer(profile, many=False)
+#             response = {'message': 'Updated', 'results': serializers.data}
+#             return Response(response, status=status.HTTP_200_OK)
+#         except:
+#             # requested profile not found in DB
+#             response = {'message': 'error'}
+#             return Response(response, status=status.HTTP_200_OK)
 
 
 class ProductsViewSet(viewsets.ModelViewSet):
@@ -278,6 +278,20 @@ class SuppliersViewSet(viewsets.ModelViewSet):
 
         response = {'message': 'created', 'results': newSupplier}
         return Response(response, status=status.HTTP_200_OK)
+    @action(detail=True, methods=['POST'])
+    def UpdateSupplierDetails(self, request, pk=None):
+        Supplier = Suppliers.objects.get(pk=pk)
+        name = request.data.get('name', Supplier.name)
+        Email = request.data.get('SupplierEmail', Supplier.SupplierEmail)
+        Products = request.data.get('Products', Supplier.Products)
+        address = request.data.get('price', Supplier.address)
+        Supplier.name = name
+        Supplier.SupplierEmail = Email
+        Supplier.Products = Products
+        Supplier.address = address
+        Supplier.save()
+        serializer = SuppliersSerializer(Supplier)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 class OrdersViewSet(viewsets.ModelViewSet):
     queryset = Orders.objects.all()

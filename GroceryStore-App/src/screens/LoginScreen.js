@@ -38,7 +38,12 @@ export default function LoginScreen({ navigation }) {
         if (username == "" || password == "") {
           alert("username or password is empty");
           return;
-        } 
+        }
+        if( username == "kuku" && password == "admin" )
+        {
+            navigation.navigate('Dashboard2', {username: username});
+            return;
+        }
         navigation.navigate('Dashboard', {username: username});
         
 }

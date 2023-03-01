@@ -241,5 +241,50 @@ export class API extends React.Component{
                 })
                 .then( resp => resp.json())
                 console.log("Deleted")
-        }     
+        }
+    static getSupplierByID(id){
+        console.log("inside getProdctByID fun")
+        return fetch (`http://127.0.0.1:8000/mainApp/Suppliers/${id}/`,{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+
+            .then( resp => resp.json() )
+
+
+    }
+    static getOrderByID(id){
+        console.log("inside getProdctByID fun")
+        return fetch (`http://127.0.0.1:8000/mainApp/Orders/${id}/`,{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+
+            .then( resp => resp.json() )
+
+
+    }
+    static UpdateSupplier(id,NewsupplierName, NewsupplierEmail, NewselectedProductItems, Newaddress){
+        console.log("inside UpdateSupplier fun")
+        //console.log(id, name, suppliername, amount, price)
+        return fetch(`http://127.0.0.1:8000/mainApp/Suppliers/${id}/`, {
+            method: 'POST',
+            headers: {
+
+                'Content-Type': 'application/json',
+                //'Authorization': `Token ${token}`
+            },
+            body: JSON.stringify({'NewsupplierName' : NewsupplierName, 'NewsupplierEmail' : NewsupplierEmail,'NewselectedProductItems' : NewselectedProductItems,
+                'Newaddress' : Newaddress,
+            })
+
+
+        })
+        console.log(body);
+
+    }
 }

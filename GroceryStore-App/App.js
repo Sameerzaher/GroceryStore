@@ -29,8 +29,15 @@ import {
   DeleteSupplierScreen,
   DeleteOrderScreen,
   AllOrderScreen,
+  Dashboard2,
+  EmployeeOrders,
+  ProductsEmployee,
+  EmployeeSuppliers,
+  SupplierEditing,
+  OrderEditing,
 
 } from './src/screens'
+
 
 const Stack = createStackNavigator()
 
@@ -68,6 +75,12 @@ export default function App() {
             <Stack.Screen name='DeleteSupplierScreen' component={DeleteSupplierScreen}/>
             <Stack.Screen name='DeleteOrderScreen' component={DeleteOrderScreen}/>
             <Stack.Screen name='AllOrderScreen' component={AllOrderScreen}/>
+            <Stack.Screen name='Dashboard2' component={Dashboard2}/>
+            <Stack.Screen name='EmployeeOrders' component={EmployeeOrders}/>
+            <Stack.Screen name='ProductsEmployee' component={ProductsEmployee}/>
+            <Stack.Screen name='EmployeeSuppliers' component={EmployeeSuppliers}/>
+            <Stack.Screen name='SupplierEditing' component={SupplierEditing}/>
+            <Stack.Screen name='OrderEditing' component={OrderEditing}/>
             <Stack.Screen
                 name="ResetPasswordScreen"
                 component={ResetPasswordScreen}

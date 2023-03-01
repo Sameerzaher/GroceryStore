@@ -23,3 +23,9 @@ export { default as AllSupplierScreen } from './Suppliers/AllSuppliersScreen'
 export { default as DeleteSupplierScreen } from './Suppliers/DeleteSupplierScreen'
 export { default as DeleteOrderScreen } from './Orders/DeleteOrderScreen'
 export { default as AllOrderScreen } from './Orders/AllOrderScreen'
+export { default as Dashboard2 } from './Dashboard2'
+export { default as EmployeeOrders} from './Orders/EmployeeOrders'
+export { default as ProductsEmployee} from './Products/ProductsEmployee'
+export { default as EmployeeSuppliers } from './Suppliers/EmployeeSuppliers'
+export { default as SupplierEditing } from "./Suppliers/SupplierEditing"
+export { default as OrderEditing } from "./Orders/OrderEditing"

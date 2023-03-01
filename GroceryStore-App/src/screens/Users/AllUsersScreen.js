@@ -11,7 +11,7 @@ export default function AllProductScreen({navigation, route}) {
     fetchData()
 },[]);
     const fetchData = ()=>{
-       fetch("http://127.0.0.1:8000/mainApp/userProfile/")
+       fetch("http:///127.0.0.1:8000/mainApp/userProfile/")
        .then(response => response.json())
       .then(jsonResponse => setuserProfile(jsonResponse))
       .catch(error => console.log(error))    
