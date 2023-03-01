@@ -5,6 +5,7 @@ import Header from '../../components/Header'
 import Button from '../../components/Button'
 import { Text } from 'react-native-paper'
 import BackButton from '../../components/BackButton'
+import {AntDesign, Feather, Ionicons} from "@expo/vector-icons";
 export default function EmployeeOrders({ navigation, route }) {
     const{username} = route.params
     return(
@@ -13,7 +14,7 @@ export default function EmployeeOrders({ navigation, route }) {
 
             <Logo />
             <Header>Orders</Header>
-            <Text>{username}</Text>
+
             <Button mode="outlined"
                     onPress={
                         () => navigation.navigate('AllOrderScreen', {username: username})

@@ -3,6 +3,7 @@ import Background from '../components/Background'
 import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Paragraph from '../components/Paragraph'
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Button from '../components/Button'
 import { Text } from 'react-native-paper'
 import API from '../../api-service'
@@ -16,10 +17,7 @@ export default function Dashboard2({ navigation, route}) {
     console.log(token);
     const [user,setUser] = useState([]);
     const logoutUser = () => {
-        console.log("inside logoutUser");
-        console.log(token);
-        deleteToken(['mr-token']);
-        console.log(token);
+
         navigation.reset({
             index: 0,
             routes: [{ name: 'StartScreen' }],
@@ -28,10 +26,11 @@ export default function Dashboard2({ navigation, route}) {
     return (
         <Background>
             <Logo />
-            <Header>Dashboard - Employee </Header>
-            <Text >Welcome Back {username}</Text>
+            <Header>Employee Dashboard</Header>
+            <Text style={{fontSize:15}}>Welcome Back {username}</Text>
             <Button
                 mode="outlined"
+                style={{width:300}}
                 onPress={
                     () => navigation.navigate('EmployeeOrders', {username: username})
                 }>
@@ -39,21 +38,22 @@ export default function Dashboard2({ navigation, route}) {
             </Button>
 
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('ProductsEmployee', {username: username})
                     }>
                 Products</Button>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('EmployeeSuppliers', {username: username})
                     }> Suppliers</Button>
             <Button
-                mode="outlined"
                 onPress={(logoutUser)
 
                 }
-            >
-                Logout
+            ><MaterialCommunityIcons name="logout" size={26} color="#560CCE" />
+                LogOut
             </Button>
         </Background>
     )

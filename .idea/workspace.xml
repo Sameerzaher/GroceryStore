@@ -7,16 +7,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1e8440-cc87-4acf-874a-3f1037dbc488" name="Default Changelist" comment="Grocery Store Expo _ V5">
+    <list default="true" id="5d1e8440-cc87-4acf-874a-3f1037dbc488" name="Default Changelist" comment="Grocery Store Expo _ V7 - sameer (final)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/api-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/api-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EditOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EditOrderScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/OrderEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/OrderEditing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard2.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EmployeeOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EmployeeOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/ProductsEmployee.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/ProductsEmployee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/DeleteSupplierScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/DeleteSupplierScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/EmployeeSuppliers.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/EmployeeSuppliers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beerstore-server/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" afterDir="false" />
     </list>
     <list id="10b3de5c-55d8-4eb4-a093-07185e96996d" name="Changes by waleed" comment="">
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/AllOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/AllOrderScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/DeleteOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/DeleteOrderScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EditOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EditOrderScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EmployeeOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EmployeeOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/NewOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/NewOrderScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/Orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/Orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/AddProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/AddProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/AllProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/AllProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/DeleteProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/DeleteProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/EditProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/EditProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/StartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/StartScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AddSupplierScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AddSupplierScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AllSuppliersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AllSuppliersScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/EditSupplierScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/EditSupplierScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/SupplierEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/SupplierEditing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/Suppliers.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/Suppliers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/DeleteUserScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/DeleteUserScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/UsersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/UsersScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +72,22 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EmployeeOrders.js">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="8" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="15" end1="16" start2="16" end2="17" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
+        <range start1="17" end1="17" start2="18" end2="19" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+        <range start1="23" end1="24" start2="25" end2="26" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+        <range start1="25" end1="25" start2="27" end2="28" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+        <range start1="31" end1="32" start2="34" end2="35" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+        <range start1="33" end1="33" start2="36" end2="37" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+        <range start1="39" end1="40" start2="43" end2="44" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+        <range start1="41" end1="41" start2="45" end2="46" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+        <range start1="47" end1="48" start2="52" end2="53" changelist="10b3de5c-55d8-4eb4-a093-07185e96996d" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -58,6 +99,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,7 +142,8 @@
       <workItem from="1677284482988" duration="13141000" />
       <workItem from="1677326200842" duration="16107000" />
       <workItem from="1677440628688" duration="46375000" />
-      <workItem from="1677668114692" duration="20519000" />
+      <workItem from="1677668114692" duration="20729000" />
+      <workItem from="1677690249591" duration="15465000" />
     </task>
     <task id="LOCAL-00001" summary="Grocery Store Expo _ V2">
       <created>1677288075761</created>
@@ -144,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677641108949</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Grocery Store Expo _ V6 - sameer">
+      <created>1677689996538</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677689996539</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +223,9 @@
     <MESSAGE value="Grocery Store Expo _ V4" />
     <MESSAGE value="Changes by waleed" />
     <MESSAGE value="Grocery Store Expo _ V5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grocery Store Expo _ V5" />
+    <MESSAGE value="Grocery Store Expo _ V6 - sameer" />
+    <MESSAGE value="Grocery Store Expo _ V7 - sameer (final)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grocery Store Expo _ V7 - sameer (final)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -15,7 +15,7 @@ export default function DeleteProductScreen( {navigation, route }) {
   const onSubmit = () => {
     API.DeleteSupplierByID(SupplierID)
     console.log("supplier",SupplierID , "Deleted")
-    4
+
     //setModalVisible(true)
    //console.log()
    Alert.alert(

@@ -4,14 +4,16 @@ import Logo from '../../components/Logo'
 import Header from '../../components/Header'
 import Button from '../../components/Button'
 import BackButton from '../../components/BackButton'
+import {AntDesign, Feather, Ionicons} from "@expo/vector-icons";
 export default function ProductsEmployee({ navigation, route  }) {
     const{username} = route.params
     return (
         <Background>
             <BackButton goBack={navigation.goBack}/>
             <Logo />
-            <Header>Products Screen</Header>
+            <Header>Employee Products </Header>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('AllProductScreen', {username: username})
                         // navigation.reset({
@@ -21,29 +23,32 @@ export default function ProductsEmployee({ navigation, route  }) {
                     }>
                 All Products</Button>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('AddProductScreen', {username: username})
                         // navigation.reset({
                         //   index: 0,
                         //   routes: [{name: 'Orders'}],
                         // })
-                    }>Add Product</Button>
+                    }><Ionicons name="md-add-circle-outline" size={24} color="black" /> Add Product</Button>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('EditProductScreen', {username: username})
                         // navigation.reset({
                         //   index: 0,
                         //   routes: [{name: 'Orders'}],
                         // })
-                    }>Edit Product</Button>
+                    }><Feather name="edit" size={24} color="black" />  Edit Product</Button>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('DeleteProductScreen', {username: username})
                         // navigation.reset({
                         //   index: 0,
                         //   routes: [{name: 'Orders'}],
                         // })
-                    }>Delete Product</Button>
+                    }><AntDesign name="delete" size={24} color="black" />  Delete Product</Button>
 
         </Background>
     )
