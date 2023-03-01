@@ -7,24 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1e8440-cc87-4acf-874a-3f1037dbc488" name="Default Changelist" comment="Grocery Store Expo _ V4">
-      <change afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EmployeeOrders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/OrderEditing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/ProductsEmployee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/EmployeeSuppliers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/SupplierEditing.js" afterDir="false" />
+    <list default="true" id="5d1e8440-cc87-4acf-874a-3f1037dbc488" name="Default Changelist" comment="Grocery Store Expo _ V5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/api-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/api-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/EditSupplierScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/EditSupplierScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EditOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/EditOrderScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/OrderEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/OrderEditing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beerstore-server/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beerstore-server/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/manage.py" afterDir="false" />
+    </list>
+    <list id="10b3de5c-55d8-4eb4-a093-07185e96996d" name="Changes by waleed" comment="">
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -61,7 +58,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,7 +99,8 @@
       <updated>1677284481758</updated>
       <workItem from="1677284482988" duration="13141000" />
       <workItem from="1677326200842" duration="16107000" />
-      <workItem from="1677440628688" duration="45331000" />
+      <workItem from="1677440628688" duration="46375000" />
+      <workItem from="1677668114692" duration="20519000" />
     </task>
     <task id="LOCAL-00001" summary="Grocery Store Expo _ V2">
       <created>1677288075761</created>
@@ -140,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677533778960</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Grocery Store Expo _ V5">
+      <created>1677641108949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677641108949</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +172,8 @@
     <MESSAGE value="Grocery Store Expo _ V3" />
     <MESSAGE value="Grocery Store Expo _ V4" />
     <MESSAGE value="Changes by waleed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by waleed" />
+    <MESSAGE value="Grocery Store Expo _ V5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grocery Store Expo _ V5" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

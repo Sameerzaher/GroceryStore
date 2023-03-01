@@ -18,6 +18,13 @@ from django.views.decorators.csrf import csrf_exempt
 
 from django.contrib.auth import authenticate, login
 
+from datetime import datetime
+from decimal import Decimal
+
+
+from django.utils.dateparse import parse_datetime
+from django.core.exceptions import ValidationError
+
 
 @csrf_exempt
 @csrf_protect
@@ -278,20 +285,28 @@ class SuppliersViewSet(viewsets.ModelViewSet):
 
         response = {'message': 'created', 'results': newSupplier}
         return Response(response, status=status.HTTP_200_OK)
+
     @action(detail=True, methods=['POST'])
     def UpdateSupplierDetails(self, request, pk=None):
-        Supplier = Suppliers.objects.get(pk=pk)
-        name = request.data.get('name', Supplier.name)
-        Email = request.data.get('SupplierEmail', Supplier.SupplierEmail)
-        Products = request.data.get('Products', Supplier.Products)
-        address = request.data.get('price', Supplier.address)
-        Supplier.name = name
-        Supplier.SupplierEmail = Email
-        Supplier.Products = Products
-        Supplier.address = address
-        Supplier.save()
-        serializer = SuppliersSerializer(Supplier)
+        try:
+             supplier = Suppliers.objects.get(pk=pk)
+        except Suppliers.DoesNotExist:
+            return Response({'message': 'Supplier not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        name = request.POST.get('name', supplier.name)
+        supplier_email = request.POST.get('SupplierEmail', supplier.SupplierEmail)
+        products = request.POST.getlist('Products', supplier.Products.values_list('id', flat=True))
+        address = request.POST.get('address', supplier.address)
+
+        supplier.name = name
+        supplier.SupplierEmail = supplier_email
+        supplier.Products.set(products)
+        supplier.address = address
+        supplier.save()
+
+        serializer = SuppliersSerializer(supplier)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 class OrdersViewSet(viewsets.ModelViewSet):
     queryset = Orders.objects.all()
@@ -354,5 +369,72 @@ class OrdersViewSet(viewsets.ModelViewSet):
         newOrder.save()
         print("Order is: ", newOrder)
 
-        response = {'message': 'created', 'results': newProduct}
+        response = {'message': 'created', 'results': newOrder}
         return Response(response, status=status.HTTP_200_OK)
+
+    @action(detail=True, methods=['POST'])
+    def UpdateOrderDetails(self, request, pk=None):
+        try:
+            ord = Orders.objects.get(pk=pk)
+        except Orders.DoesNotExist:
+            return Response({'message': 'Order not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        new_delivery_name = request.POST.get('name', ord.delivery_name)
+        new_address = request.POST.get('address', ord.address)
+        new_products = request.POST.getlist('Products', ord.products.values_list('id', flat=True))
+        new_status = request.POST.get('status', ord.status)
+        new_delivery_date_str = request.POST.get('delivery_date', ord.delivery_date)
+        # Validate delivery date
+        if new_delivery_date_str is not None:
+            try:
+                new_delivery_date = datetime.strptime(new_delivery_date_str, '%Y-%m-%d').date()
+                if new_delivery_date < datetime.now().date():
+                    return Response({'message': 'Delivery date must be in the future'}, status=status.HTTP_400_BAD_REQUEST)
+            except ValueError:
+                return Response({'message': 'Invalid delivery date format. Expected: YYYY-MM-DD'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            new_delivery_date = ord.delivery_date
+        new_order_date_str = request.POST.get('order_date', ord.order_date)
+        # Validate order date
+        if new_order_date_str is not None:
+            try:
+                new_order_date = datetime.strptime(new_order_date_str, '%Y-%m-%d').date()
+                if new_order_date > datetime.now().date():
+                    return Response({'message': 'Order date cannot be in the future'}, status=status.HTTP_400_BAD_REQUEST)
+            except ValueError:
+                return Response({'message': 'Invalid order date format. Expected: YYYY-MM-DD'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            new_order_date = ord.order_date
+
+        new_amount_str = request.POST.get('amount', ord.amount)
+        # Validate amount
+        if new_amount_str is not None:
+            try:
+                new_amount = int(new_amount_str)
+                if new_amount < 0:
+                    return Response({'message': 'Amount must be non-negative'}, status=status.HTTP_400_BAD_REQUEST)
+            except ValueError:
+                return Response({'message': 'Amount must be an integer'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            new_amount = ord.amount
+        new_total_price = request.POST.get('total_price', None)
+        if new_total_price is not None:
+            try:
+                total_price = float(new_total_price)
+                if total_price < 0:
+                    return Response({'message': 'Total price must be non-negative'}, status=status.HTTP_400_BAD_REQUEST)
+            except ValueError:
+                return Response({'message': 'Total price must be a number'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            total_price = ord.total_price
+        ord.delivery_name = new_delivery_name
+        ord.address = new_address
+        ord.products.set(new_products)
+        ord.status = new_status
+        ord.delivery_date = new_delivery_date
+        ord.order_date = new_order_date
+        ord.amount = new_amount
+        ord.total_price = total_price
+        ord.save()
+        serializer = OrdersSerializer(ord)
+        return Response(serializer.data, status=status.HTTP_200_OK)

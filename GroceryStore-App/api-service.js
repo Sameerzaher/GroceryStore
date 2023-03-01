@@ -271,7 +271,7 @@ export class API extends React.Component{
     static UpdateSupplier(id,NewsupplierName, NewsupplierEmail, NewselectedProductItems, Newaddress){
         console.log("inside UpdateSupplier fun")
         //console.log(id, name, suppliername, amount, price)
-        return fetch(`http://127.0.0.1:8000/mainApp/Suppliers/${id}/`, {
+        return fetch(`http://127.0.0.1:8000/mainApp/Suppliers/${id}/UpdateSupplierDetails/`, {
             method: 'POST',
             headers: {
 
@@ -285,6 +285,23 @@ export class API extends React.Component{
 
         })
         console.log(body);
+
+    }
+
+    static UpdateOrderDetails(id,newDeliveryName,newProds,newTotalPrice,newOrderDate,newDelivery_Date,newAddress,newAmo,newStat){
+        console.log("inside Update Order fun")
+        console.log(id,newDeliveryName,newProds,newTotalPrice,newOrderDate,newDelivery_Date,newAddress,newAmo,newStat)
+        return fetch(`http://127.0.0.1:8000/mainApp/Orders/${id}/UpdateOrderDetails/`, {
+            method: 'POST',
+            headers: {
+
+                'Content-Type': 'application/json',
+                //'Authorization': `Token ${token}`
+            },
+            body: JSON.stringify({'delivery_name': newDeliveryName, 'products' : newProds, 'total_price' : newTotalPrice,
+                'order_date' : newOrderDate, 'delivery_date' : newDelivery_Date, 'address' : newAddress, 'amount' : newAmo, 'status' : newStat, } )
+
+        })
 
     }
 }
