@@ -8,34 +8,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d1e8440-cc87-4acf-874a-3f1037dbc488" name="Default Changelist" comment="Grocery Store Expo _ V3">
-      <change afterPath="$PROJECT_DIR$/.idea/GroceryStore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/api-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/api-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/AllOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/AllOrderScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/NewOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Orders/NewOrderScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/RegisterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/RegisterScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AddSupplierScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AddSupplierScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/AllProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/AllProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/DeleteProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Products/DeleteProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AllSuppliersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Suppliers/AllSuppliersScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AddUserScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AddUserScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/AllUsersScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beerstore-server/beerstore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/beerstore/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/DeleteUserScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/DeleteUserScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/UsersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Users/UsersScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/yarn-error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore-App/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/beerstore-server/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/beerstore-server/mainApp/views.py" afterDir="false" />
     </list>
-    <list id="1c99e9e2-1fd6-446f-b9d5-60866f69d6b3" name="Changes by waleed" comment="">
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/components/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore-App/src/screens/StartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore-App/src/screens/StartScreen.js" afterDir="false" />
-    </list>
+    <list id="1c99e9e2-1fd6-446f-b9d5-60866f69d6b3" name="Changes by waleed" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -46,20 +50,8 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/GroceryStore-App/src/screens/Dashboard.js">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="10" changelist="1c99e9e2-1fd6-446f-b9d5-60866f69d6b3" />
-        <range start1="13" end1="13" start2="14" end2="15" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
-        <range start1="24" end1="25" start2="26" end2="27" changelist="1c99e9e2-1fd6-446f-b9d5-60866f69d6b3" />
-        <range start1="28" end1="29" start2="30" end2="30" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
-        <range start1="35" end1="39" start2="36" end2="36" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
-        <range start1="45" end1="49" start2="42" end2="42" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
-        <range start1="54" end1="58" start2="47" end2="47" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
-        <range start1="63" end1="67" start2="52" end2="52" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
-        <range start1="71" end1="72" start2="56" end2="57" changelist="5d1e8440-cc87-4acf-874a-3f1037dbc488" />
-      </ranges>
-    </file>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GroceryStore-App/src/screens/Products/AllProductScreen.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,22 +61,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
@@ -97,6 +91,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="android" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/GroceryStore-App/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="android" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.android" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -109,6 +118,8 @@
       <workItem from="1677284482988" duration="13141000" />
       <workItem from="1677326200842" duration="16107000" />
       <workItem from="1677440628688" duration="18684000" />
+      <workItem from="1677547448866" duration="17209000" />
+      <workItem from="1677629487157" duration="32493000" />
     </task>
     <task id="LOCAL-00001" summary="Grocery Store Expo _ V2">
       <created>1677288075761</created>

@@ -1,23 +1,23 @@
 import React from 'react';
 
 export class API extends React.Component{
-    
-    static loginUser(body){ 
+
+    static loginUser(body){
         console.log(body)
-        
-        return fetch(`http://127.0.0.1:8000/auth/`, {
-            
+
+        return fetch(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/auth/`, {
+
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-                
+
             },
             body: JSON.stringify( body )
             }).then( resp => resp.json())
         }
-    static registerUser(body){ 
+    static registerUser(body){
          console.log(body)
-         return fetch(`http://127.0.0.1:8000/mainApp/users/`, {
+         return fetch(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/users/`, {
                 method: 'POST',
                 headers: {
                      'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ export class API extends React.Component{
                  body: JSON.stringify( body )
                  }).then( resp => resp.json())
              }
-             static displayUsers(){ 
+             static displayUsers(){
                 console.log("inside displayUsers fun")
                 return fetch(`http://127.0.0.1:8000/mainApp/users/`, {
                     method: 'GET',
@@ -36,19 +36,19 @@ export class API extends React.Component{
                     //body: JSON.stringify( body )
                 }).then( resp => resp.json())
                 // .then( resp => console.log(resp))
-                }      
+                }
         static getUserDetails(token){
 
                 return fetch(`http://127.0.0.1:8000/mainApp/userProfile/getUserDetails/`,{
                     method: 'POST',
-                    headers: {  
+                    headers: {
                         'Content-Type':'application/json',
-                        'Authorization': `Token ${token}` 
+                        'Authorization': `Token ${token}`
                     }
                 })
             }
     static async createUserProfile(username1 ,username, firstName, lastName,email,userType){
-        return fetch(`http://127.0.0.1:8000/mainApp/userProfile/`, {
+        return fetch(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/userProfile/`, {
             method: 'POST',
             headers: {
 
@@ -78,30 +78,30 @@ export class API extends React.Component{
     static getAllProducts(){
         console.log("inside getAllProducts fun")
         return fetch(`http://127.0.0.1:8000/mainApp/Products/`, {
-            
+
                 method: 'GET',
                 headers: {
-                
+
                   'Content-Type': 'application/json',
-                  //'Authorization': `Token ${token}` 
+                  //'Authorization': `Token ${token}`
                      },
-                    // body: JSON.stringify({'username' : username, 'firstName' : firstName,'lastName' : lastName} )  
-                        
+                    // body: JSON.stringify({'username' : username, 'firstName' : firstName,'lastName' : lastName} )
+
                 })
                   .then( resp => resp.json())
     }
     static AddNewProduct(productname,suppliername,amount,price){
         console.log("sameer",productname,suppliername,amount,price)
         console.log("inside AddNewProduct fun")
-        return fetch(`http://127.0.0.1:8000/mainApp/Products/`, {
+        return fetch(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Products/`, {
                 method: 'POST',
                 headers: {
-                
+
                   'Content-Type': 'application/json',
-                  //'Authorization': `Token ${token}` 
+                  //'Authorization': `Token ${token}`
                      },
-                     body: JSON.stringify({'name' : productname, 'supplier_name' : suppliername,'amount' : amount,'price' : price} )  
-                        
+                     body: JSON.stringify({'name' : productname, 'supplier_name' : suppliername,'amount' : amount,'price' : price} )
+
                 })
                 .then(resp => {
                     if(resp.status === 201){
@@ -117,20 +117,20 @@ export class API extends React.Component{
     }
     static getProdctByID(id){
         console.log("inside getProdctByID fun")
-        return fetch (`http://127.0.0.1:8000/mainApp/Products/${id}/`,{
+        return fetch (`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/Products/${id}/`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             },
             })
-            
+
             .then( resp => resp.json() )
-            
-      
+
+
     }
     static DeleteProdctByID(id){
         console.log("inside DeleteProdctByID fun")
-        return fetch (`http://127.0.0.1:8000/mainApp/Products/${id}/`,{
+        return fetch (`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Products/${id}/`,{
             method: 'Delete',
             headers: {
                 'Content-Type': 'application/json'
@@ -138,38 +138,38 @@ export class API extends React.Component{
             })
             .then( resp => resp.json())
             console.log("Deleted")
-    } 
-    static updateProductDetails(id, name, suppliername, amount, price ){ 
+    }
+    static updateProductDetails(id, name, suppliername, amount, price ){
         console.log("inside updateProductDetails fun")
         console.log(id, name, suppliername, amount, price)
-        return fetch(`http://127.0.0.1:8000/mainApp/Products/${id}/UpdateProductDetails/`, {
+        return fetch(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Products/${id}/UpdateProductDetails/`, {
            method: 'POST',
            headers: {
-           
+
              'Content-Type': 'application/json',
-             //'Authorization': `Token ${token}` 
+             //'Authorization': `Token ${token}`
                 },
                 body: JSON.stringify({'name' : name, 'supplier_name' : suppliername,'amount' : amount,
                 'price' : price,
-            })  
-            
-                   
+            })
+
+
            })
            console.log(body);
-               
+
         }
         static AddNewSupplier(SupplierName,SupplierEmail,Prods,Address){
             console.log("sameer",SupplierName,SupplierEmail,Prods,Address)
             console.log("inside AddNewSupplier fun")
-            return fetch(`http://127.0.0.1:8000/mainApp/Suppliers/`, {
+            return fetch(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Suppliers/`, {
                     method: 'POST',
                     headers: {
-                    
+
                       'Content-Type': 'application/json',
-                      //'Authorization': `Token ${token}` 
+                      //'Authorization': `Token ${token}`
                          },
-                         body: JSON.stringify({'name' : SupplierName, 'SupplierEmail' : SupplierEmail,'Products' : Prods,'address' : Address} )  
-                            
+                         body: JSON.stringify({'name' : SupplierName, 'SupplierEmail' : SupplierEmail,'Products' : Prods,'address' : Address} )
+
                     })
                     .then(resp => {
                         if(resp.status === 201){
@@ -182,20 +182,20 @@ export class API extends React.Component{
                     .catch(error => {
                         // handle error
                     });
-        } 
+        }
         static AddNewOrder(DeliveryName,Prods,TotalPrice,OrderDate,Delivery_Date,Address,Amo,Stat){
             console.log("sameer",DeliveryName,Prods,TotalPrice,OrderDate,Delivery_Date,Address,Amo,Stat)
             console.log("inside AddNewOrder fun")
-            return fetch(`http://127.0.0.1:8000/mainApp/Orders/`, {
+            return fetch(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Orders/`, {
                     method: 'POST',
                     headers: {
-                    
+
                       'Content-Type': 'application/json',
-                      //'Authorization': `Token ${token}` 
+                      //'Authorization': `Token ${token}`
                          },
                          body: JSON.stringify({'delivery_name': DeliveryName, 'products' : Prods, 'total_price' : TotalPrice,
                          'order_date' : OrderDate, 'delivery_date' : Delivery_Date, 'address' : Address, 'amount' : Amo, 'status' : Stat} )
-                            
+
                     })
                     .then(resp => {
                         if(resp.status === 201){
@@ -208,10 +208,10 @@ export class API extends React.Component{
                     .catch(error => {
                         // handle error
                     });
-        } 
+        }
         static DeleteSupplierByID(id){
             console.log("inside DeleteSupplierByID fun")
-            return fetch (`http://127.0.0.1:8000/mainApp/Suppliers/${id}/`,{
+            return fetch (`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Suppliers/${id}/`,{
                 method: 'Delete',
                 headers: {
                     'Content-Type': 'application/json'
@@ -219,10 +219,10 @@ export class API extends React.Component{
                 })
                 .then( resp => resp.json())
                 console.log("Deleted")
-        }   
+        }
         static DeleteOrderByID(id){
             console.log("inside DeleteOrderByID fun")
-            return fetch (`http://127.0.0.1:8000/mainApp/Orders/${id}/`,{
+            return fetch (`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Orders/${id}/`,{
                 method: 'Delete',
                 headers: {
                     'Content-Type': 'application/json'
@@ -230,10 +230,10 @@ export class API extends React.Component{
                 })
                 .then( resp => resp.json())
                 console.log("Deleted")
-        } 
+        }
         static DeleteUserProfilerByID(id){
             console.log("inside DeleteUserProfileByID fun")
-            return fetch (`http://127.0.0.1:8000/mainApp/userProfile/${id}/`,{
+            return fetch (`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/userProfile/${id}/`,{
                 method: 'Delete',
                 headers: {
                     'Content-Type': 'application/json'
@@ -241,5 +241,18 @@ export class API extends React.Component{
                 })
                 .then( resp => resp.json())
                 console.log("Deleted")
-        }     
+        }
+    static getUserProfilerByID(id){
+        console.log("inside getProdctByID fun")
+        return fetch (`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/userProfile/${id}/`,{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+
+            .then( resp => resp.json() )
+
+
+    }
 }

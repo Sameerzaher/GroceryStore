@@ -11,16 +11,15 @@ export default function DeleteProductScreen( {navigation, route }) {
   const {username} = route.params;
   const [UserID,setUserID] = useState('');
   //const [modalVisible, setModalVisible] = useState(false);
-  
+
   const onSubmit = () => {
     API.DeleteUserProfilerByID(UserID)
     console.log("User",UserID , "Deleted")
-    4
     //setModalVisible(true)
    //console.log()
    Alert.alert(
     'Deleted User' ,UserID
-     
+
    );
   }
   return (

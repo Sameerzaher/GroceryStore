@@ -6,7 +6,7 @@ import Button from '../../components/Button';
 import BackButton from '../../components/BackButton';
 import TextInput from '../../components/TextInput';
 import { SelectList } from 'react-native-dropdown-select-list';
-import { View, StyleSheet, Alert } from 'react-native';
+import { View, StyleSheet, Alert,ScrollView } from 'react-native';
 import axios from 'axios';
 import { API } from '../../../api-service';
 
@@ -29,7 +29,7 @@ export default function AddUserScreen({ navigation, route }) {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/mainApp/users/`);
+                const response = await axios.get(`https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/users/`);
                 const users = response.data.map((user) => ({ key: user.id, value: user.username, username: user.username }));
 
                 setUsers(users);
@@ -70,6 +70,7 @@ export default function AddUserScreen({ navigation, route }) {
             console.log(selectedUser, usernameInput, firstName, lastName, email, userType);
             await API.createUserProfile(selectedUser, usernameInput, firstName, lastName, email, userType);
             Alert.alert('User created successfully');
+            navigation.navigate('Dashboard', {username: username});
         }
         catch (error) {
             console.log(error);
@@ -81,7 +82,8 @@ export default function AddUserScreen({ navigation, route }) {
             <BackButton goBack={navigation.goBack} />
             <Logo />
             <Header>Add User Screen</Header>
-
+            <View style={styles.dropdownContainer}>
+            <ScrollView style={styles.scrollView}>
             <SelectList
                 setSelected={handleSelectUser}
                 data={users}
@@ -117,15 +119,18 @@ export default function AddUserScreen({ navigation, route }) {
                 autoCapitalize="none"
             />
 
-            <View style={styles.dropdownContainer}>
+
+
                 <SelectList
+
                     setSelected={setUserType}
                     data={userTypes}
                     label="Select a User Type"
                 />
-            </View>
 
-            <Button mode="outlined" onPress={handleSubmit}>
+            </ScrollView>
+            </View>
+            <Button style={{marginTop: 20,width: 400}} mode="outlined" onPress={handleSubmit}>
                 Submit
             </Button>
         </Background>
@@ -136,12 +141,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   dropdownContainer: {
-    height: 40,
-    width: '80%',
-    marginTop: 20,
+    width: 400,
+      maxWidth:340,
+      marginTop:20,
+      height:'auto'
   },
   dropdownStyle: {
     backgroundColor: '#fafafa',
+
   },
   dropdownItem: {
     justifyContent: 'flex-start',
@@ -150,4 +157,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#000',
   },
+
 });

@@ -11,16 +11,15 @@ export default function DeleteProductScreen( {navigation, route }) {
   const {username} = route.params;
   const [Productname,setProductname] = useState('');
   //const [modalVisible, setModalVisible] = useState(false);
-  
+
   const onSubmit = () => {
     API.DeleteProdctByID(Productname)
     console.log("product",Productname , "Deleted")
-    4
     //setModalVisible(true)
    //console.log()
    Alert.alert(
     'Deleted Product' ,Productname
-     
+
    );
   }
   return (

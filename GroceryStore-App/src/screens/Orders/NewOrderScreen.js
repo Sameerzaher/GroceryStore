@@ -30,7 +30,7 @@ export default function NewOrderScreen({ navigation, route }) {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/mainApp/Products/')
+    fetch('https://e343-2a06-c701-41fe-f800-7de3-4699-caf7-40a1.eu.ngrok.io/mainApp/Products/')
       .then((response) => response.json())
       .then((data) => setProductItems(data))
       .catch((error) => console.error(error));
@@ -56,7 +56,7 @@ export default function NewOrderScreen({ navigation, route }) {
       <BackButton goBack={navigation.goBack} />
       <Logo />
       <Header>Add Order Screen</Header>
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.ScrollView}>
       <TextInput
         label="Delivery Name"
         returnKeyType="next"
@@ -128,7 +128,7 @@ export default function NewOrderScreen({ navigation, route }) {
               keyboardType="numeric"
           />
       </ScrollView>
-    
+
       <Button mode="outlined" onPress={onSubmit}>
         Submit
       </Button>
