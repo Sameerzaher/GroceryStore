@@ -1,4 +1,4 @@
-import {React, useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import Background from '../../components/Background'
 import Logo from '../../components/Logo'
 import Header from '../../components/Header'
@@ -62,7 +62,7 @@ export default function SupplierEditing({ navigation , route}) {
                 onChangeText={(value) => setNewSupplierEmail(value)}
                 autoCapitalize="none"
             />
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, height: 200, width: '250' }}>
                 <MultiSelect
                     items={NewproductItems}
                     searchInputPlaceholderText="Search Items..."
@@ -71,7 +71,7 @@ export default function SupplierEditing({ navigation , route}) {
                     onSelectedItemsChange={onSelectedItemsChange}
                     selectedItems={NewselectedProductItems}
                     styleDropdownMenu={{ marginTop: 50 }}
-                    styleDropdownMenuSubsection={{ backgroundColor: 'white' }}
+                    styleDropdownMenuSubsection={{ backgroundColor: '#560CCE' }}
                     styleTextDropdown={{ paddingHorizontal: 50}}
                     styleListContainer={{ backgroundColor: 'white' }}
                     styleItemContainer={{ paddingVertical: 50 }}
@@ -87,7 +87,7 @@ export default function SupplierEditing({ navigation , route}) {
                 onChangeText={(value) => setNewAddress(value)}
                 autoCapitalize="none"
             />
-            <Button mode="outlined" onPress={onSubmit}>
+            <Button  onPress={onSubmit}>
                 Submit
             </Button>
         </Background>

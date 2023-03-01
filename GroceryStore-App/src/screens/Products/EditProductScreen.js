@@ -6,6 +6,7 @@ import BackButton from '../../components/BackButton'
 import TextInput from '../../components/TextInput'
 import { API } from '../../../api-service'
 import { Alert, Modal, StyleSheet, Text, Pressable, View, Platform, SafeAreaView, TouchableOpacity } from "react-native";
+import Header from "../../components/Header";
 
 export default function EditProductScreen({navigation, route}) {
   const {username} = route.params;
@@ -25,6 +26,7 @@ const [ProductID,setProductID] = useState('');
     <Background>
         <BackButton goBack={navigation.goBack} />
       <Logo />
+        <Header>Edit Product </Header>
       <TextInput
        label="Product ID "
        returnKeyType="next"

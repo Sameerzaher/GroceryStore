@@ -4,6 +4,7 @@ import Logo from '../../components/Logo'
 import Header from '../../components/Header'
 import Button from '../../components/Button'
 import BackButton from '../../components/BackButton'
+import {AntDesign, Feather, Ionicons} from "@expo/vector-icons";
 
 export default function Suppliers({ navigation, route }) {
   const{username} = route.params
@@ -11,39 +12,43 @@ export default function Suppliers({ navigation, route }) {
     <Background>
         <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Suppliers Screen</Header>
+      <Header>Suppliers </Header>
       <Button mode="outlined"
+              style={{width:300}}
           onPress={
             () => navigation.navigate('AllSupplierScreen', {username: username})
             // navigation.reset({
             //   index: 0,
             //   routes: [{name: 'Orders'}],
             // })
-          }>All Suppliers</Button>
+          }><Ionicons name="person" size={24} color="black" />  All Suppliers</Button>
       <Button mode="outlined"
+              style={{width:300}}
           onPress={
             () => navigation.navigate('AddSupplierScreen', {username: username})
             // navigation.reset({
             //   index: 0,
             //   routes: [{name: 'Orders'}],
             // })
-          }>Add Supplier</Button>
+          }><AntDesign name="adduser" size={24} color="black" /> Add Supplier</Button>
     <Button mode="outlined"
+            style={{width:300}}
           onPress={
             () => navigation.navigate('EditSupplierScreen', {username: username})
             // navigation.reset({
             //   index: 0,
             //   routes: [{name: 'Orders'}],
             // })
-          }>Edit Supplier</Button>
-    <Button mode="outlined"
+          }><Feather name="edit" size={24} color="black" /> Edit Supplier</Button>
+    <Button
+            style={{width:300}}
           onPress={
             () => navigation.navigate('DeleteSupplierScreen', {username: username})
             // navigation.reset({
             //   index: 0,
             //   routes: [{name: 'Orders'}],
             // })
-          }>Delete Supplier</Button>
+          }><AntDesign name="delete" size={24} color="black" />  Supplier</Button>
     </Background>
   )
 }

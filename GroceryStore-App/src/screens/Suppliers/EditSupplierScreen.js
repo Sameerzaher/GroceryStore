@@ -27,7 +27,7 @@ export default function EditSupplierScreen({ navigation , route}) {
       <Logo />
       <Header>Edit Supplier Screen</Header>
         <TextInput
-            label="Product ID "
+            label="Supplier ID "
             returnKeyType="next"
             value={SupplierID}
             onChangeText={(value) => setSupplierID(value)}

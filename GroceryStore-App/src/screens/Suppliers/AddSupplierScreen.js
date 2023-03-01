@@ -45,9 +45,11 @@ export default function AddSupplierScreen({ navigation, route }) {
 
   return (
     <Background>
+
       <BackButton goBack={navigation.goBack} />
       <Logo />
       <Header>Add Supplier Screen</Header>
+        <View style={{flex:1 ,width:250,alignSelf:"center"}}>
       <TextInput
         label="Supplier Name"
         returnKeyType="next"
@@ -62,7 +64,7 @@ export default function AddSupplierScreen({ navigation, route }) {
         onChangeText={(value) => setSupplierEmail(value)}
         autoCapitalize="none"
       />
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, height: 200, width: '250' }}>
       <MultiSelect
           items={productItems}
           searchInputPlaceholderText="Search Items..."
@@ -70,8 +72,8 @@ export default function AddSupplierScreen({ navigation, route }) {
           displayKey="name"
           onSelectedItemsChange={onSelectedItemsChange}
           selectedItems={selectedProductItems}
-          styleDropdownMenu={{ marginTop: 50 }}
-          styleDropdownMenuSubsection={{ backgroundColor: 'white' }}
+          styleDropdownMenu={{ marginTop: 50}}
+          styleDropdownMenuSubsection={{ backgroundColor: '#560CCE' }}
           styleTextDropdown={{ paddingHorizontal: 50}}
           styleListContainer={{ backgroundColor: 'white' }}
           styleItemContainer={{ paddingVertical: 50 }}
@@ -79,7 +81,7 @@ export default function AddSupplierScreen({ navigation, route }) {
           iconCancel={<MaterialCommunityIcons name="close" size={10} color="#999" />}
         />
         </View>
-      <Paragraph>Selected Products: {selectedProductItems.join(', ')}</Paragraph>
+      <Paragraph >Selected Products: {selectedProductItems.join(', ')}</Paragraph>
       <TextInput
         label="Address"
         returnKeyType="next"
@@ -87,9 +89,12 @@ export default function AddSupplierScreen({ navigation, route }) {
         onChangeText={(value) => setAddress(value)}
         autoCapitalize="none"
       />
-      <Button mode="outlined" onPress={onSubmit}>
+      <Button
+          style={{ padding:5, marginTop:5, justifyContent: 'center'}}
+          mode="outlined" onPress={onSubmit}>
         Submit
       </Button>
+        </View>
     </Background>
   );
 }

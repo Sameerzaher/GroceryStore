@@ -12,13 +12,16 @@ export default function StartScreen({ navigation }) {
       <Header>Grocery Store</Header>
 
       <Button
-          style={{  width: '100%', justifyContent: 'center'}}
+
+          style={{  width:300, justifyContent: 'center'}}
         mode="contained"
         onPress={() => navigation.navigate('LoginScreen')}
       >
         Login
-      </Button>
+      </Button
+         >
       <Button
+          style={{  width:300, justifyContent: 'center'}}
         mode="outlined"
         onPress={() => navigation.navigate('RegisterScreen')}
       >

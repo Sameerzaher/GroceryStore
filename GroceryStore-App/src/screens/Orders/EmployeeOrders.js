@@ -16,37 +16,41 @@ export default function EmployeeOrders({ navigation, route }) {
             <Header>Orders</Header>
 
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('AllOrderScreen', {username: username})
                         // navigation.reset({
                         //   index: 0,
                         //   routes: [{name: 'Orders'}],
                         // })
-                    }>AllOrderScreen</Button>
+                    }>AllOrder</Button>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('NewOrderScreen', {username: username})
                         // navigation.reset({
                         //   index: 0,
                         //   routes: [{name: 'Orders'}],
                         // })
-                    }>NewOrderScreen</Button>
+                    }><Ionicons name="md-add-circle-outline" size={24} color="black" /> AddOrder</Button>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('EditOrderScreen', {username: username})
                         // navigation.reset({
                         //   index: 0,
                         //   routes: [{name: 'Orders'}],
                         // })
-                    }>EditOrderScreen</Button>
+                    }><Feather name="edit" size={24} color="black" />  EditOrder</Button>
             <Button mode="outlined"
+                    style={{width:300}}
                     onPress={
                         () => navigation.navigate('DeleteOrderScreen', {username: username})
                         // navigation.reset({
                         //   index: 0,
                         //   routes: [{name: 'Orders'}],
                         // })
-                    }>DeleteOrderScreen</Button>
+                    }><AntDesign name="delete" size={24} color="black" /> DeleteOrder</Button>
         </Background>
     )
 }

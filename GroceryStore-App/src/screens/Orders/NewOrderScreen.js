@@ -64,7 +64,7 @@ export default function NewOrderScreen({ navigation, route }) {
         onChangeText={(value) => setDeliveryName(value)}
         autoCapitalize="none"
       />
-       <View style={{ flex: 1, height: 200, width: '100%' }}>
+       <View style={{ flex: 1, height: 200, width: '250' }}>
   <MultiSelect
     items={productItems}
     searchInputPlaceholderText="Search Items..."

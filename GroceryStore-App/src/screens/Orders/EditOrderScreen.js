@@ -26,7 +26,7 @@ export default function EditOrderScreen({navigation, route}) {
         <Background>
             <BackButton goBack={navigation.goBack} />
             <Logo />
-            <Header>Order Screen</Header>
+            <Header>Edit Order</Header>
             <TextInput
                 label="Order ID "
                 returnKeyType="next"

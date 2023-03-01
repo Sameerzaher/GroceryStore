@@ -15,7 +15,6 @@ export default function DeleteProductScreen( {navigation, route }) {
   const onSubmit = () => {
     API.DeleteProdctByID(Productname)
     console.log("product",Productname , "Deleted")
-    4
     //setModalVisible(true)
    //console.log()
    Alert.alert(
@@ -27,7 +26,7 @@ export default function DeleteProductScreen( {navigation, route }) {
     <Background>
         <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Delete Product Screen</Header>
+      <Header>Delete Product </Header>
       <TextInput
        label="Product ID "
        returnKeyType="next"

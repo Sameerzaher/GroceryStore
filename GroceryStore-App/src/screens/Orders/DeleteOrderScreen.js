@@ -14,8 +14,7 @@ export default function DeleteProductScreen( {navigation, route }) {
   
   const onSubmit = () => {
     API.DeleteOrderByID(OrderID)
-    console.log("Order",OrderID , "Deleted")
-    4
+    console.log("Order",OrderID , "Delete")
     //setModalVisible(true)
    //console.log()
    Alert.alert(
@@ -27,7 +26,7 @@ export default function DeleteProductScreen( {navigation, route }) {
     <Background>
         <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Delete Order Screen</Header>
+      <Header>Delete Order </Header>
       <TextInput
        label="Order ID "
        returnKeyType="next"
